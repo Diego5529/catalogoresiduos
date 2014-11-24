@@ -1,0 +1,105 @@
+<%= form_for(@empresa) do |f| %>
+  <% if @empresa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@empresa.errors.count, "error") %> prohibited this empresa from being saved:</h2>
+
+      <ul>
+      <% @empresa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo_empresa %><br>
+    <%= f.number_field :codigo_empresa %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo_ibge %><br>
+    <%= f.number_field :codigo_ibge %>
+  </div>
+  <div class="field">
+    <%= f.label :id_ramo_atividade %><br>
+    <%= f.number_field :id_ramo_atividade %>
+  </div>
+  <div class="field">
+    <%= f.label :cpf_cnpj %><br>
+    <%= f.text_field :cpf_cnpj %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_fantasia %><br>
+    <%= f.text_field :nome_fantasia %>
+  </div>
+  <div class="field">
+    <%= f.label :razao_social %><br>
+    <%= f.text_field :razao_social %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_login %><br>
+    <%= f.text_field :usuario_login %>
+  </div>
+  <div class="field">
+    <%= f.label :senha %><br>
+    <%= f.text_field :senha %>
+  </div>
+  <div class="field">
+    <%= f.label :recuperar_senha %><br>
+    <%= f.text_field :recuperar_senha %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :email_alternativo %><br>
+    <%= f.text_field :email_alternativo %>
+  </div>
+  <div class="field">
+    <%= f.label :url_site %><br>
+    <%= f.text_field :url_site %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br>
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="field">
+    <%= f.label :fax %><br>
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :endereco %><br>
+    <%= f.text_field :endereco %>
+  </div>
+  <div class="field">
+    <%= f.label :numero %><br>
+    <%= f.number_field :numero %>
+  </div>
+  <div class="field">
+    <%= f.label :complemento %><br>
+    <%= f.text_field :complemento %>
+  </div>
+  <div class="field">
+    <%= f.label :bairro %><br>
+    <%= f.text_field :bairro %>
+  </div>
+  <div class="field">
+    <%= f.label :cep %><br>
+    <%= f.text_field :cep %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade %><br>
+    <%= f.text_field :cidade %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_responsavel %><br>
+    <%= f.text_field :nome_responsavel %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
